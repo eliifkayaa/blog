@@ -1,5 +1,5 @@
 
-  <div style="display: flex;justify-content:space-between">
+  <div style="display: flex;justify-content:space-between;">
     <div style="display: flex;align-items:center;">
       <h2 style="padding: 20px 0px 0px 40px ">
           {{isUpdateView ? 'Yazıyı Güncelle' : 'Yazıyı Gör' }}
@@ -13,7 +13,7 @@
 
   <mat-divider></mat-divider>
   
-  <div *ngIf="!isUpdateView">
+  <div *ngIf="!isUpdateView" style="overflow-y: auto; max-height: 500px; max-width: 1000px;">
     <div class="row mb-3">
       <div class="col-md-6" style="padding-left: 0px;">
         <img class="w-100" src="assets/images/image{{imageUrl}}.jpg" alt="">
@@ -26,7 +26,7 @@
     <div class="row" style="background-color: lightgray;
     margin-bottom: 20px;
     padding: 20px;" *ngFor="let comment of commentData">
-      <div class="col-md-2">
+      <div class="col-md-2" >
         <img style="width: 30px;
         height: 30px;
         border-radius: 50%;" src="assets/images/profile/profile{{comment.userId}}.jpg" alt="">
